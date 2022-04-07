@@ -1,0 +1,12 @@
+from Levenshtein import distance as lev
+import numpy as np
+
+a = ['James', 'Alex', 'Roger', 'Steve']
+b= ['Jonathan', 'Amanda', 'Roxy', 'Sean']
+
+list = []
+
+for i,k in zip (a,b):
+  list += [lev(i,k)]
+  
+lev_score = np.array(list)
